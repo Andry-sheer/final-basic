@@ -1,0 +1,115 @@
+
+//? MAIN ------------------------------------------------------------>
+
+
+// ? FONTS ---------------------------------------------------------->
+$font-x: 12px;
+$font-s: 13px;
+$font-ss: 14px;
+$font-xs: 16px;
+$font-sx: 18px;
+$font-xl: 19px;
+$font-xxl: 21px;
+$font-xxm: 22px;
+$font-xxs: 30px;
+$font-xxxl: 36px;
+$font-2xl: 38px;
+$font-5xl: 96px;
+
+
+
+//? COLORS ---------------------------------------------------------->
+$main-color: #323264;
+$alt-color: #46466E;
+$soft-color: #686887;
+$accent-color: #A90F3C;
+$regular-color: #24A3FF;
+$hover-color: #0085FF;
+$active-color: #99D0FF;
+$bg-color: #F5F5FA;
+$bg-alt: #EDEDF7;
+$text-color: #B3B3BA;
+$separator-color: #E6E6F0;
+$basic-white: #ffffff;
+$basic-black: #000000;
+
+//? GRADIENT -------------------------------------------------------->
+$gradient: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+$gradient-soft: linear-gradient(23deg, #323264 0%, #323264 50.63%, #7a425e 100%);
+$gradient-red: linear-gradient(310deg, #f0145a 0%, #693264 100%);
+$gradient-superSoft: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643e72 100%);
+$gradient-red-text: linear-gradient(298deg, #f0145a, #ef8080);
+
+//? BREAKPOINTS ----------------------------------------------------->
+// $breakpoint-sm: 375px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-2xl: 1920px;
+
+//? RADIUS ---------------------------------------------------------->
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-xl: 24px;
+$radius-circle: 50%;
+
+
+//? MIXINS ---------------------------------------------------------->
+@mixin viewport-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin viewport-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin viewport-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin viewport-2xl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+@mixin main-gradient-text($bg-text: $gradient-red-text) {
+  background: $bg-text;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin subtitle($color: $text-color) {
+  color: $color;
+  font-size: 30px;
+  font-weight: 700;
+
+  @include viewport-md{
+    font-size: 38px;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin base-link($color: $regular-color, $hover-color: $accent-color) {
+  color: $color;
+  text-decoration: none;
+  transition: all .2s;
+  font-weight: 700;
+  //? padding-bottom: 3px;
+
+  //? &:hover {
+  //   color: $hover-color;
+  //   border-bottom: 2px solid $accent-color;
+  // }
+}
