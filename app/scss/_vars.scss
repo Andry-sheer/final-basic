@@ -48,3 +48,59 @@ $breakpoint-xl: 1440px;
 $breakpoint-xxl: 1920px;
 
 //? MIXINS ---------------------------------------------------------->
+
+@mixin viewport-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin viewport-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin viewport-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin viewport-xxl {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin main-gradient-text($bg-text: $gradient-red-text) {
+  background: $bg-text;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin subtitle($color: $text-color) {
+  color: $color;
+  font-size: 30px;
+  font-weight: 700;
+
+  @include viewport-md {
+    font-size: 38px;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin base-link {
+  color: $active-color;
+  text-decoration: none;
+  transition: .2s ease;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
