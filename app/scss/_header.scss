@@ -24,6 +24,7 @@
     border: 2px solid $basic-white;
     position: relative;
     margin: 0 auto 30px;
+    transition: linear .2s;
 
     &::before {
       content: '';
@@ -35,6 +36,11 @@
       transform: rotate(-45deg);
       border-bottom: 2px solid $basic-white;
       border-left: 2px solid $basic-white;
+      transition: linear .2s;
+    }
+
+    &:hover, &:hover::before {
+      border-color: $accent-color;
     }
   }
 }
@@ -107,16 +113,28 @@
     text-decoration: none;
   }
 
-  &__social { //? IMPORTANT REPLACE!!!!!!!!!!!!
+  &__svgIcon {
+    width: 24px;
+    height: 24px;
+    fill: $basic-white;
+    transition: linear .2s;
+  }
+
+  &__social {
     display: none;
 
     @include viewport-md {
       display: block;
-      color: $basic-white;
-      font-weight: 700;
-      font-size: 20px;
+      width: 24px;
+      height: 24px;
+
+      &:hover .header__svgIcon {
+        fill: $accent-color;
+      }
     }
   }
+
+
 
   &__box {
     display: flex;
@@ -139,8 +157,7 @@
   }
 
   &__box-logo {
-
-
+    
     img {
       width: 69px;
       height: 32px;
