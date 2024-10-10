@@ -12,3 +12,23 @@
     navigationMenu.classList.remove('active')
   })
 })();
+
+(()=> {
+  const tabsItem = document.querySelectorAll('.tabs__links-item');
+  const tabsContent = document.querySelectorAll('.tabs__content-item');
+
+  tabsItem.forEach((tab, index) => {
+    tab.addEventListener('click', ()=> {
+      tabsContent.forEach((content)=> {
+        content.classList.remove('active');
+      })
+
+      tabsItem.forEach((content)=> {
+        content.classList.remove('active');
+      })
+
+      tabsItem[index].classList.add('active');
+      tabsContent[index].classList.add('active');
+    })
+  })
+})();

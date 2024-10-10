@@ -89,6 +89,31 @@ $breakpoint-xxl: 1920px;
   }
 }
 
+@mixin description {
+  color: $basic-white;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+@mixin cardTitle ($color: $regular-color, $hover-color: $hover-color, $active-color: $active-color){
+  color: $color;
+  font-weight: 700;
+  font-size: 22px;
+  transition: .2s ease;
+
+  @include viewport-md {
+    &:hover {
+    color: $hover-color;
+    }
+
+    &:active {
+      color: $active-color;
+    }
+  }
+
+
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
