@@ -32,3 +32,16 @@
     })
   })
 })();
+
+(()=> {
+  const langs = document.querySelectorAll('.header__langs-link');
+  langs.forEach((lang, index)=> {
+    lang.addEventListener('click', ()=> {
+      langs.forEach((lang)=> {
+        lang.classList.remove('active');
+      })
+      
+      langs[index].classList.add('active');
+    })
+  })
+})();
