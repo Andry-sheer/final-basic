@@ -1,0 +1,61 @@
+
+.team {
+  padding: 50px 0 60px;
+
+  &__container {
+  }
+
+  &__swiper {
+  }
+
+  &__slide {
+  }
+
+  &__image {
+    height: 500px;
+  }
+
+  &__inner {
+    padding: 30px;
+    background: $separator-color;
+  }
+
+  &__inner-link {
+    @include base-link;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 8px;
+    margin: 0 0 5px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 6px;
+      height: 6px;
+      border-bottom: 2px solid $regular-color;
+      border-right: 2px solid $regular-color;
+      transform: rotate(-45deg);
+      transition: .2s ease;
+    }
+  }
+
+	&__inner-title {
+    @include subtitle;
+	}
+
+
+  &__inner-name {
+  }
+}
+
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}

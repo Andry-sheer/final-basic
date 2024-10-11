@@ -45,3 +45,18 @@
     })
   })
 })();
+
+
+(()=> {
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    spaceBetween: 25,
+    speed: 600,
+    grabCursor: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+})();

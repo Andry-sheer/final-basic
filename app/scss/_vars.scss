@@ -112,4 +112,8 @@ $breakpoint-xxl: 1920px;
   &:hover {
     color: $hover-color;
   }
+
+  &:hover::before {
+    border-color: $hover-color;
+  }
 }
