@@ -1,19 +1,5 @@
 //?---------------------------- VARIABLES ------------------------------------------------>
 
-// ? FONTS ---------------------------------------------------------->
-$font-x: 12px;
-$font-s: 13px;
-$font-ss: 14px;
-$font-xs: 16px;
-$font-sx: 18px;
-$font-xl: 19px;
-$font-xxl: 21px;
-$font-xxm: 22px;
-$font-xxs: 30px;
-$font-xxxl: 36px;
-$font-2xl: 38px;
-$font-5xl: 96px;
-
 //? COLORS ---------------------------------------------------------->
 $main-color: #323264;
 $alt-color: #46466E;
@@ -48,7 +34,6 @@ $breakpoint-xl: 1440px;
 $breakpoint-xxl: 1920px;
 
 //? MIXINS ---------------------------------------------------------->
-
 @mixin viewport-md {
   @media (min-width: $breakpoint-md) {
     @content;
@@ -110,8 +95,6 @@ $breakpoint-xxl: 1920px;
       color: $active-color;
     }
   }
-
-
 }
 
 @mixin flex-center {
