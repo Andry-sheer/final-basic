@@ -1,0 +1,95 @@
+
+.publications {
+
+  &__container {
+    padding: 30px 30px 0px 30px;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    @include base-link;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 9px;
+    font-size: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $regular-color;
+      border-right: 2px solid $regular-color;
+      transform: rotate(-45deg);
+      transition: .2s ease;
+    }
+  }
+
+  &__title {
+    @include subtitle;
+    @include main-gradient-text;
+  }
+
+  &__body {
+    display: flex;
+    flex-flow: column;
+
+    @include viewport-md {
+      flex-flow: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    padding-bottom: 30px;
+    border-radius: $radius-md;
+    overflow: hidden;
+
+    @include viewport-md {
+      flex: 1 1 45%;
+    }
+  }
+
+  &__card-inner {
+    padding: 30px;
+  }
+
+  &__card-image {
+    
+  }
+
+  &__card-title {
+    @include publication-title;
+    padding-bottom: 15px;
+  }
+
+  &__card-date {
+    @include publication-title($text-color);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+
+  &__card-description {
+    font-size: 14px;
+    color: $basic-black;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      border-top: 4px solid $separator-color;
+      width: 100%;
+    }
+  }
+}

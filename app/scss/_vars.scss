@@ -65,6 +65,20 @@ $breakpoint-xxl: 1920px;
   background-clip: text;
 }
 
+@mixin partner-title {
+  color: $main-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@mixin publication-title ($color: $regular-color) {
+  font-weight: 700;
+  color: $color;
+  font-size: 16px;
+}
+
 @mixin subtitle($color: $text-color) {
   color: $color;
   font-size: 30px;
