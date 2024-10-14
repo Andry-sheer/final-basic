@@ -10,6 +10,7 @@ body {
   position: relative;
   border-radius: 0 0 $radius-md $radius-md;
   margin-bottom: 20px;
+  padding-bottom: 60px;
 
   &::before {
     content: '';
@@ -73,4 +74,14 @@ body {
       background: $text-color;
     }
   }
+}
+
+.hidden-svg {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
 }

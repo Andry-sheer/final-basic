@@ -61,3 +61,22 @@
     },
   });
 })();
+
+
+//? ----------- CDN -------------------------------------->
+
+const formPopup = new Popup({
+  id: "form-class",
+  title: "My First Popup",
+  content: `
+      <form>
+        <input placeholder="name" type="text" />
+        <input placeholder="email" type="email" />
+        <input placeholder="password" type="password" />
+      </form>
+
+      An example popup.
+      Supports multiple lines.`,
+});
+
+// formPopup.show();
