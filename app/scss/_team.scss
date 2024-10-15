@@ -20,8 +20,12 @@
   }
 
   &__image {
-    height: 500px;
+    height: 300px;
     position: relative;
+
+    @include viewport-md {
+      height: 500px;
+    }
 
     img {
       object-fit: cover;
@@ -69,7 +73,12 @@
 	&__inner-title {
     @include subtitle;
     @include main-gradient-text;
+    font-size: 24px;
     margin-bottom: 30px;
+
+    @include viewport-md {
+      font-size: 38px;
+    }
 	}
 
   &__inner-name {
