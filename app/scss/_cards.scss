@@ -7,6 +7,10 @@
     @include viewport-md {
       padding: 0 60px 60px;
     }
+
+    @include viewport-xxl {
+      padding: 0 160px 60px;
+    }
   }
 
   &__link {
@@ -48,6 +52,10 @@
       gap: 60px;
       padding: 0 60px;
       flex-wrap: wrap;
+    }
+
+    @include viewport-xxl {
+      padding: 0 160px;
     }
   }
 
