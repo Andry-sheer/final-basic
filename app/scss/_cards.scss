@@ -11,6 +11,18 @@
     @include viewport-xxl {
       padding: 0 160px 60px;
     }
+
+    &--services {
+      padding: 0 30px 30px;
+
+      @include viewport-md {
+        padding: 0 60px 60px;
+      }
+  
+      @include viewport-xxl {
+        padding: 0 160px 60px;
+      }
+    }
   }
 
   &__link {
@@ -61,6 +73,10 @@
 
   &__content-card {
     flex: 1 1 30%;
+
+    @include viewport-lg {
+      flex: 1 1 28%;
+    }
   }
 
   &__content-link {

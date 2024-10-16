@@ -150,8 +150,6 @@
     }
   }
 
-
-
   &__box {
     display: flex;
     justify-content: space-between;
@@ -181,43 +179,23 @@
       @include viewport-md {
         width: 130px;
         height: 60px;
-
-        img + img {
-        width: 21px;
-        height: 47px;
-      }
       }
     }
 
     &--services {
-      display: flex;
-      gap: 4px;
-      font-size: 20px;
-      text-decoration: none;
-      color: $basic-white;
-      line-height: 20px;
+        img {
+          width: 169px;
+          height: 57px;
+        }
 
-      img + img {
-        width: 11px;
-        height: 26px;
-      }
-
-      @include viewport-md {
-        font-size: 36px;
-        line-height: 40px;
-
-          img + img {
-          width: 21px;
-          height: 47px;
+        @include viewport-md {
+          img {
+            width: 302px;
+            height: 60px;
+          }
         }
       }
     }
-  }
-
-  &__box-services {
-    width: 69px;
-    height: 32px;
-  }
 
   &__box-burger {
     width: 25px;
