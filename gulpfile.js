@@ -59,6 +59,11 @@ function images() {
 		.pipe(dest('dist/images'))
 }
 
+function sprites() {
+	return src('app/sprites/**/*')
+	.pipe(dest('dist/sprites'))
+}
+
 function styles() {
 	return src('app/scss/style.scss')
 		.pipe(scss())
@@ -103,11 +108,12 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 // exports.build = build;
 exports.images = images;
+exports.sprites = sprites;
 exports.clean = clean;
 exports.html = html;
 exports.buildProject = buildProject;
 
 exports.default = parallel(styles, scripts, browsersync, watching);
 
-exports.build = series(clean, html, images, buildProject);
+exports.build = series(clean, html, images, sprites, buildProject);
 
