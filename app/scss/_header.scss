@@ -62,7 +62,10 @@
   }
 
   &__container {
-    position: relative;
+    @include viewport-lg {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
   }
 
   &__inner {
@@ -84,6 +87,8 @@
     @include viewport-lg {
       margin: 0 0 15px;
       justify-content: flex-end;
+
+      grid-area: 1/2/2/3;
     }
   }
 
@@ -162,10 +167,7 @@
     }
 
     @include viewport-lg {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 30px;
+      grid-area: 1/1/3/2;
       margin: 0;
     }
   }
@@ -251,6 +253,10 @@
       position: static;
       background: transparent;
       padding: 0;
+    }
+
+    @include viewport-lg {
+      grid-area: 2/2/3/3;
     }
   }
 
