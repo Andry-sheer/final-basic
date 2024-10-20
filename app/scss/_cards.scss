@@ -50,20 +50,21 @@
   &__title {
     @include subtitle;
     @include main-gradient-text;
-    
   }
 
   &__container-inner {
-    display: flex;
-    flex-flow: column;
+    display: grid;
     padding: 0 30px;
     gap: 30px;
 
     @include viewport-md {
-      flex-flow: row;
+      grid-template-columns: repeat(2, 1fr);
       gap: 60px;
       padding: 0 60px;
-      flex-wrap: wrap;
+    }
+
+    @include viewport-lg {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include viewport-xxl {
@@ -72,11 +73,6 @@
   }
 
   &__content-card {
-    flex: 1 1 30%;
-
-    @include viewport-lg {
-      flex: 1 1 28%;
-    }
   }
 
   &__content-link {
