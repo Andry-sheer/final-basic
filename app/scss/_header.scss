@@ -16,6 +16,16 @@
     }
   }
 
+  &--eComance {
+    background: none;
+    min-height: 0vh;
+    margin-bottom: 30px;
+
+    @include viewport-md {
+      margin-bottom: 60px;
+    }
+  }
+
   &__header {
   }
 
@@ -173,6 +183,7 @@
   }
 
   &__box-logo {
+    line-height: 10px;
 
     img {
       width: 69px;
@@ -184,7 +195,9 @@
       }
     }
 
-    &--services {
+    &--services, &--eComance {
+      line-height: 10px;
+
         img {
           width: 169px;
           height: 57px;
