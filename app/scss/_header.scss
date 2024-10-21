@@ -6,17 +6,7 @@
   justify-content: space-between;
   background: url('../images/header-bg.png') no-repeat center / auto 100%;
 
-  &--services {
-    background: none;
-    min-height: 0vh;
-    margin-bottom: 30px;
-
-    @include viewport-md {
-      margin-bottom: 60px;
-    }
-  }
-
-  &--eComance {
+  &--services, &--eComance, &--about {
     background: none;
     min-height: 0vh;
     margin-bottom: 30px;
@@ -126,6 +116,11 @@
 
     &.active {
       background: $accent-color;
+      color: $basic-white;
+    }
+
+    &--about {
+      color: $text-color;
     }
   }
 
@@ -142,6 +137,10 @@
     color: $basic-white;
     font-weight: 700;
     text-decoration: none;
+
+    &--about {
+      color: $text-color;
+    }
   }
 
   &__svgIcon {
@@ -210,6 +209,22 @@
           }
         }
       }
+
+      &--about {
+        line-height: 10px;
+
+        img {
+          width: 177px;
+          height: 57px;
+        }
+
+        @include viewport-md {
+          img {
+            width: 318px;
+            height: 60px;
+          }
+        }
+      }
     }
 
   &__box-burger {
@@ -243,6 +258,39 @@
     span {
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    &--about {
+      width: 25px;
+      height: 16px;
+      position: relative;
+      cursor: pointer;
+  
+      @include viewport-md {
+        display: none;
+      }
+
+      &::before,
+      &::after,
+      span {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        right: 0;
+        background: $main-color;
+      }
+
+      &::after {
+        top: auto;
+        bottom: 0;
+      }
+  
+      span {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 
