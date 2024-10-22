@@ -33,6 +33,20 @@
       &--services {
         margin: 0;
       }
+
+      &--about {
+        margin: 0;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -30px;
+          left: 0;
+          width: 100%;
+          border-top: 2px solid $separator-color;
+        }
+      }
 		}
 
 		&__list {

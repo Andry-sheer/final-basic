@@ -63,6 +63,22 @@
 })();
 
 
+// const swiper = new Swiper('.about__swiper', {
+//   // Default parameters
+//   slidesPerView: 1,
+//   spaceBetween: 10,
+//   // Responsive breakpoints
+//   breakpoints: {
+//     // when window width is >= 640px
+//     768: {
+//       slidesPerView: 4,
+//       spaceBetween: 40
+//     }
+//   }
+// })
+
+
+
 //? ----------- CDN -------------------------------------->
 
 const formPopup = new Popup({

@@ -148,6 +148,10 @@
     height: 24px;
     fill: $basic-white;
     transition: linear .2s;
+
+    &--about {
+      fill: $text-color;
+    }
   }
 
   &__social {
@@ -387,6 +391,16 @@
 
     &:hover {
       border-color: $regular-color;
+    }
+
+    &--about {
+      @include viewport-md {
+        @include base-link($regular-color, $accent-color);
+        
+        &:hover {
+          border-color: $accent-color;
+        }
+      }
     }
   }
 }
