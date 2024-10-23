@@ -34,7 +34,6 @@
     }
 
     .popup-close {
-      display:flex;
       color: #EC6F5D !important;
       position: absolute;
       top: 5px;
@@ -43,10 +42,19 @@
       padding: 10px;
       font-size: 25px;
       line-height: 10px;
+      border-radius: $radius-md;
+      transition: linear .2s;
 
       @include viewport-md {
         top: 0;
+        right: 0;
         padding: 15px;
+      }
+
+      @include viewport-xl {
+        &:hover {
+          background: $separator-color;
+        }
       }
     }
 
