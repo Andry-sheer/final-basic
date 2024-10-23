@@ -81,18 +81,43 @@
 
 //? ----------- CDN -------------------------------------->
 
-const formPopup = new Popup({
-  id: "form-class",
-  title: "My First Popup",
-  content: `
-      <form>
-        <input placeholder="name" type="text" />
-        <input placeholder="email" type="email" />
-        <input placeholder="password" type="password" />
-      </form>
+// const formPopup = new Popup({
+//   id: "form-class",
+//   title: "My First Popup",
+//   content: `
+//       <form>
+//         <input placeholder="name" type="text" />
+//         <input placeholder="email" type="email" />
+//         <input placeholder="password" type="password" />
+//       </form>
 
-      An example popup.
-      Supports multiple lines.`,
-});
+//       An example popup.
+//       Supports multiple lines.`,
+// });
 
 // formPopup.show();
+
+const formPopup = new Popup({
+  id: "form-class",
+  disableScroll: true,
+  content: 
+    `<div class="popup-form">
+        <h1 class="popup-title">We would like to help you</h1>
+        <button class="popup-close">X</button>
+      <form>
+        <input class="input-name" placeholder="Name" type="text"/>
+        <textarea class="input-message" placeholder="Message" rows="6"></textarea>
+        <h3 class="input-title">How to answer you?</h3>
+        <input class="input-number" placeholder="Phone number" type="number"/>
+        <input class="input-email" placeholder="Email" type="email"/>
+        <input class="input-button" type="submit" value="Send message"/>
+      </form>
+    </div>`,
+});
+
+(()=> {
+  const popupButton = document.querySelector('.cards__button');
+  popupButton.addEventListener('click', ()=> {
+    formPopup.show();
+  })
+})();
