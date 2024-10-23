@@ -6,7 +6,7 @@
   justify-content: space-between;
   background: url('../images/header-bg.png') no-repeat center / auto 100%;
 
-  &--services, &--eComance, &--about {
+  &--services, &--eComance, &--about, &--publication {
     background: none;
     min-height: 0vh;
     margin-bottom: 30px;
@@ -75,6 +75,10 @@
     padding: 10px 30px;
     margin: 0 -30px;
 
+    &--publication, &--about {
+      background: $bg-color;
+    }
+
     @include viewport-md {
       background: transparent;
       margin: 0 0 30px;
@@ -119,7 +123,7 @@
       color: $basic-white;
     }
 
-    &--about {
+    &--about, &--publication {
       color: $text-color;
     }
   }
@@ -138,7 +142,7 @@
     font-weight: 700;
     text-decoration: none;
 
-    &--about {
+    &--about, &--publication {
       color: $text-color;
     }
   }
@@ -149,7 +153,7 @@
     fill: $basic-white;
     transition: linear .2s;
 
-    &--about {
+    &--about, &--publication {
       fill: $text-color;
     }
   }
@@ -229,11 +233,26 @@
           }
         }
       }
+
+      &--publication {
+        img {
+          width: 212px;
+          height: 57px;
+        }
+
+        @include viewport-md {
+          img {
+            width: 382px;
+            height: 60px;
+          }
+        }
+      }
+
     }
 
   &__box-burger {
     width: 25px;
-    height: 16px;
+    height: 18px;
     position: relative;
     cursor: pointer;
 
@@ -264,9 +283,9 @@
       transform: translateY(-50%);
     }
 
-    &--about {
+    &--about, &--publication {
       width: 25px;
-      height: 16px;
+      height: 18px;
       position: relative;
       cursor: pointer;
   
@@ -393,7 +412,7 @@
       border-color: $regular-color;
     }
 
-    &--about {
+    &--about, &--publication {
       @include viewport-md {
         @include base-link($regular-color, $accent-color);
         
