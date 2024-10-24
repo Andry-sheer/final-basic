@@ -339,6 +339,7 @@
     border-radius: $radius-md $radius-md 0px 0px;
     padding: 12px;
     transition: linear .3s;
+    box-shadow: 1px 1px 10px black;
 
     &.active {
       bottom: 0;
