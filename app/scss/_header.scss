@@ -121,10 +121,22 @@
     &.active {
       background: $accent-color;
       color: $basic-white;
+
+      &:hover {
+        background: $accent-color;
+        color: $basic-white;
+      }
     }
 
     &--about, &--publication {
       color: $text-color;
+
+      @include viewport-xl {
+        &:hover {
+          background: $text-color;
+          color: $basic-white;
+        }
+      }
     }
   }
 
