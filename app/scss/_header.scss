@@ -133,8 +133,8 @@
 
       @include viewport-xl {
         &:hover {
-          background: $text-color;
-          color: $basic-white;
+          background: $bg-alt;
+          color: $text-color;
         }
       }
     }
