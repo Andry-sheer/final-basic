@@ -12,6 +12,11 @@
     @include viewport-xxl {
       padding: 30px 160px 0px 160px;
     }
+
+    &--publication {
+      border-top-left-radius: $radius-md;
+      border-top-right-radius: $radius-md;
+    }
   }
 
   &__header {
